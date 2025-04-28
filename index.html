@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>パスワード付きメッセージカード</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", sans-serif;
+      background-color: #f0f8ff;
+      text-align: center;
+      padding: 50px;
+    }
+    #card {
+      display: none; /* 最初は非表示 */
+    }
+    h1 {
+      color: #ff69b4;
+    }
+    p {
+      font-size: 20px;
+      color: #333;
+    }
+    img {
+      margin-top: 20px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <h2>パスワードを入力してください</h2>
+  <input type="password" id="passwordInput" placeholder="パスワード">
+  <button onclick="checkPassword()">送信</button>
+
+  <div id="card">
+    <h1>ありがとう</h1>
+    <p>今まで本当にありがとう。<br>これからもずっと応援しています。</p>
+    <img src="https://example.com/your-image.jpg" alt="思い出の写真">
+  </div>
+
+  <script>
+    function checkPassword() {
+      const password = document.getElementById("passwordInput").value;
+      const correctPassword = "secret123"; // ここにあなたが設定したいパスワードを書く！
+
+      if (password === correctPassword) {
+        document.getElementById("card").style.display = "block";
+        document.getElementById("passwordInput").style.display = "none";
+        event.target.style.display = "none";
+        document.querySelector("h2").style.display = "none";
+      } else {
+        alert("パスワードが違います。");
+      }
+    }
+  </script>
+
+</body>
+</html>
