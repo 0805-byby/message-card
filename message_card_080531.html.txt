@@ -1,0 +1,62 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>たーくんへ</title>
+<style>
+body {
+    background: linear-gradient(to bottom, #fbc2eb, #a6c1ee);
+    color: #333;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    text-align: center;
+    padding: 50px;
+}
+#message {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+input[type="password"] {
+    padding: 10px;
+    font-size: 16px;
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+</style>
+</head>
+<body>
+<h1>たーくんへ</h1>
+<p>パスワードを入力してね</p>
+<input type="password" id="password" placeholder="パスワードを入力">
+<br>
+<button onclick="checkPassword()">送信</button>
+
+<div id="message">
+    <h2>あーちゃんより</h2>
+    <p>いつもいつも本当にありがとう🌷<br>
+    出会ってから今まで、感謝することがたくさんある日々でした。<br>
+    （ここに全文を入れられます）<br>
+    本当に大好きだよ。</p>
+</div>
+
+<script>
+function checkPassword() {
+    var pw = document.getElementById("password").value;
+    if (pw === "080531") {
+        document.getElementById("message").style.display = "block";
+    } else {
+        alert("パスワードが違います！");
+    }
+}
+</script>
+</body>
+</html>
